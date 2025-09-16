@@ -19,7 +19,7 @@ export default function Product({ product }: { product: productType }) {
     <>
       <div
         key={product.id}
-        className=" bg-white shadow rounded-xl transition-all duration-300 hover:scale-105 hover:scale-x-110"
+        className=" bg-white shadow rounded-xl transition-all duration-300 hover:scale-101 hover:scale-x-110"
       >
         <div className="product p-4  shadow">
           <Card className="gap-2 ">

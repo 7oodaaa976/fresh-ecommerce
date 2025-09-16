@@ -18,7 +18,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="bg-gray-400 text-white sticky top-0 ">
+    <nav className="bg-gray-400 text-white">
       <div className="container w-full lg:w-[80%] mx-auto flex justify-between items-center p-4 ">
         <div className="flex items-center gap-4">
           <Link href={'/'}>            <Image src={logoImg} alt="logoImg" priority width={150} height={150} />
