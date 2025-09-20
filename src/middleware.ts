@@ -10,18 +10,19 @@ export async function middleware(request: NextRequest) {
       request.nextUrl.pathname === "/register"
     ) {
       return NextResponse.redirect(new URL("/", request.url));
-    } else {
-      return NextResponse.next();
     }
+    return NextResponse.next();
   } else {
-    if (request.nextUrl.pathname === "/cart") {
+    if (
+      request.nextUrl.pathname === "/cart" ||
+      request.nextUrl.pathname === "/allorders"
+    ) {
       return NextResponse.redirect(new URL("/login", request.url));
-    } else {
-      return NextResponse.next();
     }
+    return NextResponse.next();
   }
 }
 
 export const config = {
-  matcher: ["/cart", "/login", "/register"],
+  matcher: ["/cart", "/allorders", "/login", "/register"],
 };

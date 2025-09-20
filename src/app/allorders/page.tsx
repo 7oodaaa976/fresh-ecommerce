@@ -1,5 +1,8 @@
+export const dynamic = "force-dynamic";
+
 import getUserOrders from "@/services/getUserOrders";
 import { OrderType } from "@/Types/order.type";
+import Image from "next/image";
 
 export default async function AllOrders() {
   const orders: OrderType[] = await getUserOrders();
@@ -21,8 +24,10 @@ export default async function AllOrders() {
           <div className="mt-3 space-y-2">
             {order.cartItems.map((item) => (
               <div key={item.product._id} className="flex items-center gap-3">
-                <img
+                <Image
                   src={item.product.imageCover}
+                  width={200}
+                  height={200}
                   alt={item.product.title}
                   className="w-16 h-16 object-cover rounded"
                 />
