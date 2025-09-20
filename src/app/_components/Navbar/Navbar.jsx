@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { signOut, useSession } from "next-auth/react";
 import { CartContext } from "@/context/CartContext";
+import { Menu, X } from "lucide-react";
+
 
 export default function Navbar() {
   const { numOfCart } = useContext(CartContext);
