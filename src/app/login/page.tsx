@@ -16,6 +16,7 @@ import { toast } from "sonner";
 import { schema, loginType } from "@/Schema/loginSchema";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Login() {
   const router = useRouter()
@@ -84,6 +85,12 @@ export default function Login() {
           <Button className="w-full cursor-pointer bg-[#000aa1]" type="submit">
             Login
           </Button>
+         <Link
+          href="/forgot-password"
+          className="text-sm text-blue-600 hover:underline"
+        >
+          Forgot your password?
+        </Link>
         </form>
       </div>
     </>

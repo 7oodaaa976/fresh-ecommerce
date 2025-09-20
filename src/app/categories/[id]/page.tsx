@@ -31,6 +31,8 @@ export default async function CategoryDetails({ params }: Props) {
               className="border p-4 rounded-lg shadow hover:shadow-lg transition"
             >
               <Image
+              width={200}
+              height={200}
                 src={product.imageCover}
                 alt={product.title}
                 className="w-full h-40 object-cover mb-3 rounded"

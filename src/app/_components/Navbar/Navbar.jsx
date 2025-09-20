@@ -54,6 +54,12 @@ export default function Navbar() {
             <li>
               <Link href="/brands">Brands</Link>
             </li>
+             <li>
+              <Link href="/wishlist">wishlist</Link>
+            </li>
+            <li>
+              <Link href="/allorders">ِAllOrders</Link>
+            </li>
           </ul>
         </div>
 

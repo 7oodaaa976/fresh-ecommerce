@@ -17,6 +17,8 @@ export default async function CategoriesPage() {
             className="border p-2 rounded text-center block hover:shadow-lg transition"
           >
             <Image
+            width={200}
+            height={200}
               src={cat.image}
               alt={cat.name}
               className="w-full h-32 object-cover mb-2 rounded"
