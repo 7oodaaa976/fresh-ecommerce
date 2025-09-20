@@ -3,7 +3,6 @@ import { toast } from "sonner";
 import { loginType } from "@/Schema/loginSchema";
 import { registerType } from "@/Schema/registerSchema";
 
-// ✅ Register
 export async function authRegister(forminfo: registerType) {
   try {
     const response = await axios.post(
@@ -26,7 +25,6 @@ export async function authRegister(forminfo: registerType) {
   }
 }
 
-// ✅ Login
 export async function authLogin(forminfo: loginType) {
   try {
     const response = await axios.post(
@@ -38,7 +36,6 @@ export async function authLogin(forminfo: loginType) {
         position: "top-center",
         duration: 4000,
       });
-      // save token to localStorage if needed
       localStorage.setItem("token", response.data.token);
     }
   } catch (err: unknown) {
@@ -51,7 +48,6 @@ export async function authLogin(forminfo: loginType) {
   }
 }
 
-// ✅ Send reset code
 export async function sendResetCode(email: string) {
   try {
     const response = await axios.post(
@@ -73,7 +69,6 @@ export async function sendResetCode(email: string) {
   }
 }
 
-// ✅ Verify reset code
 export async function verifyResetCode(resetCode: string) {
   try {
     const response = await axios.post(
@@ -91,7 +86,6 @@ export async function verifyResetCode(resetCode: string) {
   }
 }
 
-// ✅ Reset password
 export async function resetPassword(email: string, newPassword: string) {
   try {
     const response = await axios.put(
@@ -102,7 +96,6 @@ export async function resetPassword(email: string, newPassword: string) {
       toast.success("Password reset successfully 🎉", {
         position: "top-center",
       });
-      // ممكن تخزن التوكن الجديد لو حابب
       localStorage.setItem("token", response.data.token);
     }
     return response.data;

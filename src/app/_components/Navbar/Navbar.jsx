@@ -6,7 +6,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { signOut, useSession } from "next-auth/react";
 import { CartContext } from "@/context/CartContext";
-import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const { numOfCart } = useContext(CartContext);
@@ -54,7 +53,7 @@ export default function Navbar() {
             <li>
               <Link href="/brands">Brands</Link>
             </li>
-             <li>
+            <li>
               <Link href="/wishlist">wishlist</Link>
             </li>
             <li>
